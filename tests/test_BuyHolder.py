@@ -1,8 +1,14 @@
-import pytest
+import datetime
 
-from buy_hold_analyser import BuyHolder
+from buy_hold_analyser.BuyHolder import BuyHolder
 
 
-def dummy_test():
-    a = BuyHolder()
-    assert a.dummy() == 1
+def test_ops(dummy_from_conftest):
+    assert dummy_from_conftest is not None
+
+def test_dummy():
+    a = BuyHolder([],datetime.datetime.today(),datetime.datetime.today())
+    assert a is not None
+
+def test_buy_hold_analyse():
+
